@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="621.0" prefWidth="723.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.addPartController">
+   <children>
+      <VBox fx:id="mainVbox" layoutX="-3.0" prefHeight="615.0" prefWidth="723.0">
+         <children>
+            <HBox fx:id="radioHbox" prefHeight="77.0" prefWidth="673.0" spacing="60.0">
+               <children>
+                  <Label fx:id="titleLabel" style="-fx-font-weight: bold;" text="Add Part">
+                     <font>
+                        <Font size="15.0" />
+                     </font></Label>
+                  <RadioButton fx:id="inHouseRadio" mnemonicParsing="false" onAction="#onInHouse" selected="true" text="In-House">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                     <toggleGroup>
+                        <ToggleGroup fx:id="inOutToggle" />
+                     </toggleGroup></RadioButton>
+                  <RadioButton fx:id="outsourcedRadio" mnemonicParsing="false" onAction="#onOutsourced" text="Outsourced" toggleGroup="$inOutToggle">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin></RadioButton>
+               </children>
+               <padding>
+                  <Insets top="20.0" />
+               </padding>
+            </HBox>
+            <VBox fx:id="fieldsVbox" prefHeight="260.0" prefWidth="617.0">
+               <children>
+                  <HBox fx:id="idHbox" prefHeight="38.0" prefWidth="723.0" spacing="20.0">
+                     <children>
+                        <StackPane prefHeight="38.0" prefWidth="119.0">
+                           <children>
+                              <Label fx:id="idLabel" text="ID" StackPane.alignment="CENTER_LEFT" />
+                           </children>
+                        </StackPane>
+                        <StackPane prefHeight="150.0" prefWidth="200.0">
+                           <children>
+                              <TextField fx:id="idField" disable="true" promptText="Auto Gen- Disabled" style="-fx-font-style: italic;" />
+                           </children>
+                        </StackPane>
+                     </children></HBox>
+                  <HBox fx:id="nameHbox" layoutX="10.0" layoutY="10.0" prefHeight="38.0" prefWidth="723.0" spacing="20.0">
+
+                     <children>
+                        <StackPane prefHeight="38.0" prefWidth="119.0">
+                           <children>
+                              <Label fx:id="nameLabel" text="Name" StackPane.alignment="CENTER_LEFT" />
+                           </children>
+                        </StackPane>
+                        <StackPane prefHeight="150.0" prefWidth="200.0">
+                           <children>
+                              <TextField fx:id="nameField" />
+                           </children>
+                        </StackPane>
+                     </children>
+                  </HBox>
+                  <HBox fx:id="invHbox" layoutX="10.0" layoutY="48.0" prefHeight="38.0" prefWidth="723.0" spacing="20.0">
+                     <children>
+                        <StackPane prefHeight="38.0" prefWidth="119.0">
+                           <children>
+                              <Label fx:id="invLabel" text="Inv" StackPane.alignment="CENTER_LEFT" />
+                           </children>
+                        </StackPane>
+                        <StackPane prefHeight="150.0" prefWidth="200.0">
+                           <children>
+                              <TextField fx:id="invField" />
+                           </children>
+                        </StackPane>
+                     </children>
+                  </HBox>
+                  <HBox fx:id="priceHbox" layoutX="10.0" layoutY="86.0" prefHeight="38.0" prefWidth="723.0" spacing="20.0">
+                     <children>
+                        <StackPane prefHeight="38.0" prefWidth="119.0">
+                           <children>
+                              <Label fx:id="priceLabel" text="Price/Cost" StackPane.alignment="CENTER_LEFT" />
+                           </children>
+                        </StackPane>
+                        <StackPane prefHeight="150.0" prefWidth="200.0">
+                           <children>
+                              <TextField fx:id="priceField" prefHeight="24.0" prefWidth="170.0" />
+                           </children>
+                        </StackPane>
+                     </children>
+                  </HBox>
+                  <HBox fx:id="maxMinHbox" layoutX="10.0" layoutY="124.0" prefHeight="38.0" prefWidth="723.0" spacing="20.0">
+                     <children>
+                        <StackPane prefHeight="38.0" prefWidth="119.0">
+                           <children>
+                              <Label fx:id="maxLabel" text="Max" StackPane.alignment="CENTER_LEFT" />
+                           </children>
+                        </StackPane>
+                        <StackPane prefHeight="150.0" prefWidth="200.0">
+                           <children>
+                              <TextField fx:id="maxField" prefHeight="24.0" prefWidth="170.0" />
+                           </children>
+                        </StackPane>
+                        <StackPane layoutX="10.0" layoutY="10.0" prefHeight="38.0" prefWidth="56.0">
+                           <children>
+                              <Label fx:id="minLabel" text="Min" StackPane.alignment="CENTER_LEFT" />
+                           </children>
+                        </StackPane>
+                        <StackPane layoutX="149.0" layoutY="10.0" prefHeight="150.0" prefWidth="200.0">
+                           <children>
+                              <TextField fx:id="minField" prefHeight="24.0" prefWidth="170.0" />
+                           </children>
+                        </StackPane>
+                     </children>
+                  </HBox>
+                  <HBox fx:id="machineCompanyHbox" layoutX="10.0" layoutY="162.0" prefHeight="38.0" prefWidth="723.0" spacing="20.0">
+                     <children>
+                        <StackPane prefHeight="38.0" prefWidth="119.0">
+                           <children>
+                              <Label fx:id="machineCompanyLabel" prefHeight="16.0" prefWidth="108.0" text="Machine ID" StackPane.alignment="CENTER_LEFT" />
+                           </children>
+                        </StackPane>
+                        <StackPane prefHeight="150.0" prefWidth="200.0">
+                           <children>
+                              <TextField fx:id="machineCompanyField" />
+                           </children>
+                        </StackPane>
+                     </children>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+            </VBox>
+            <HBox fx:id="buttonsHbox" prefHeight="100.0" prefWidth="549.0" spacing="30.0">
+               <children>
+                  <Button fx:id="saveButton" mnemonicParsing="false" onAction="#onSave" text="Save" />
+                  <Button fx:id="cancelButton" mnemonicParsing="false" onAction="#onCancel" text="Cancel" />
+               </children>
+               <VBox.margin>
+                  <Insets left="300.0" />
+               </VBox.margin>
+            </HBox>
+            <VBox fx:id="exceptionVbox" prefHeight="152.0" prefWidth="401.0">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <children>
+                  <Label fx:id="nameExcepLabel" prefHeight="16.0" prefWidth="673.0" textFill="RED" />
+                  <Label fx:id="invExcepLabel" prefHeight="16.0" prefWidth="704.0" textFill="RED" />
+                  <Label fx:id="priceExcepLabel" prefHeight="16.0" prefWidth="674.0" textFill="RED" />
+                  <Label fx:id="maxExcepLabel" prefHeight="16.0" prefWidth="678.0" textFill="RED" />
+                  <Label fx:id="minExcepLabel" prefHeight="16.0" prefWidth="687.0" textFill="RED" />
+                  <Label fx:id="machineCompanyExcepLabel" prefHeight="16.0" prefWidth="676.0" textFill="RED" />
+               </children></VBox>
+         </children>
+         <padding>
+            <Insets bottom="20.0" left="30.0" right="20.0" top="30.0" />
+         </padding></VBox>
+   </children>
+</AnchorPane>
