@@ -1,7 +1,7 @@
 # Java_Inventory_System
-School project
+<h3>School project</h3>
 
-Learned the basics of Java with this project (classes, inheritance, variables, file directory structure)
-Learned the basics of using IntelliJ IDEA
-Learned the basics of using JavaFX
+<p>Learned the basics of Java with this project (classes, inheritance, variables, file directory structure)<p>
+<p>Learned the basics of using IntelliJ IDEA</p>
+<p>Learned the basics of using JavaFX<p>
 
